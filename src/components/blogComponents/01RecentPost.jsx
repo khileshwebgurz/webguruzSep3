@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import SearchBar from './SearchBar'
+// import SearchBar from './SearchBar'
 
 const RecentPost = ({ posts }) => {
  
   return (
     <>
-      <SearchBar />
+      {/* <SearchBar /> */}
 
       <div className="row blog-image-content">
         <div className="col-sm-6 col-xs-12 image">
