@@ -1,4 +1,4 @@
-export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-dynamic'
 import dbConnect from "../../../../lib/mongodb";
 import Post from "../../../../models/Post";
 import redis from "../../../../lib/redis";

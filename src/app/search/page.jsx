@@ -2,7 +2,7 @@
 
 // I'm using this force-dynamic in route.js and search/page.js which helps me in making this one as dynamic not static as they both use request.url
 // which used to geenerate page statically at build time .
-export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-dynamic'
 import Image from "next/image";
 import Link from "next/link";
 
