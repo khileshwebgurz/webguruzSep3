@@ -44,7 +44,7 @@ export async function GET(request) {
       currentPage: page,
       totalPages,
     });
-
+    
     // Cache the response data for 1 hour
     await redis.set(cacheKey, responseData, 'EX', 3600); // Cache for 1 hour
     return new Response(responseData, {

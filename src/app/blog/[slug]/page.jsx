@@ -33,7 +33,7 @@ const page = async ({ params }) => {
             <div className="col-sm-12 col-xs-12">
               <Image
                 src={post.yoast_head_json.schema["@graph"][0].thumbnailUrl}
-                alt="Card image cap"
+                alt="singleblog"
                 priority
                 width={825}
                 height={431}

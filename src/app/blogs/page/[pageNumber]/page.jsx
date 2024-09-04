@@ -2,7 +2,7 @@
 import { getBlogData } from '../../../../../lib/blogsData'
 import Link from "next/link";
 import AllPost from "../../../../components/blogComponents/02AllPosts";
-
+import RecentPost from '@/components/blogComponents/01RecentPost';
 export default async function BlogsPageNumber({ params }) {
   const pageNumber = parseInt(params.pageNumber, 10);
   const { posts, totalPages, currentPage } = await getBlogData(pageNumber);
@@ -22,7 +22,7 @@ export default async function BlogsPageNumber({ params }) {
             </ul>
           </div>
         </div>
-        {/* <RecentPost posts={posts} /> */}
+        <RecentPost posts={posts} />
         <AllPost
        
           posts={posts}

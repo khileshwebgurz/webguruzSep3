@@ -3,9 +3,10 @@ const mongoose = require("mongoose");
 // const cron = require('node-cron');
 
 // MongoDB connection
-const mongoURI = 'mongodb://localhost:27017/'; // Replace with your MongoDB URI
+const mongoURI = "mongodb://localhost:27017/welcome"; // Replace with your MongoDB URI
+// mongodb://wgzadmin:QCkm96wlffVIC4Oedf@216.10.245.120:20456/
 mongoose
-  .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(mongoURI)
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
@@ -17,8 +18,11 @@ const postSchema = new mongoose.Schema({
   excerpt: Object,
   acf: Object,
   yoast_head_json: Object,
-  date: String
+  date: String,
 });
+
+// Post: This is the name of the model. In Mongoose, the model name is typically capitalized and singular. Mongoose automatically looks for a 
+// collection named posts (plural) in the database to store the documents.
 
 const Post = mongoose.model("Post", postSchema);
 
@@ -56,4 +60,3 @@ async function fetchAndStorePosts(page = 1) {
 
 // Run the fetch and store function
 fetchAndStorePosts().then(() => mongoose.connection.close());
-

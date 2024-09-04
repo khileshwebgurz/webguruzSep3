@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-// import { getFetchedData } from "../../../../lib/getFetchedData";
+
 // import '../../blogs/blogs.css'
 
 function normalizeString(str) {

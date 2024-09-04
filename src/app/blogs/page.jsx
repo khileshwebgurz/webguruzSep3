@@ -15,6 +15,7 @@ const page = async ({ searchParams }) => {
     throw new Error("Failed to fetch posts");
   }
   const { data, currentPage, totalPages } = await response.json();
+  
 
 
   return (
@@ -43,8 +44,9 @@ const page = async ({ searchParams }) => {
                 <li>
                   <Link href="/categories/google-remarketing">
                     Google Remarketing
-                  </Link>
+                    </Link>
                 </li>
+                 
                 <li>
                   <Link href="/categories/artificial-intelligence">
                     Artificial Intelligence
